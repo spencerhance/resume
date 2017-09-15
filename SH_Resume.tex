@@ -1,0 +1,283 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,letterpaper,sans]{moderncv}        
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size 
+%('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 
+%'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+% style options are 'casual' %(default), 'classic','oldstyle' and 'banking'
+\moderncvstyle{banking}
+
+
+
+
+% color options 'blue' 
+%(default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{blue}                                
+%\renewcommand{\familydefault}{\sfdefault}         
+% to set the default font; use '\sfdefault' for the default sans serif font, 
+%'\rmdefault' for the default roman one, or any tex font name
+
+% Suppress page numbers
+\nopagenumbers{}
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+%
+% Remove the space after the address
+%
+\makeatletter
+\patchcmd{\makehead}{%search
+  \flushmakeheaddetails\@firstmakeheaddetailselementtrue\\\null}{%replace
+  \flushmakeheaddetails\@firstmakeheaddetailselementtrue\par\vspace{-\baselineskip}\null}{%success
+  }{%failure
+  }
+\makeatother
+%
+%
+%
+
+
+% personal data
+\name{Spencer}{Hance}
+%\title{Computer Engineering}                               
+\address{234 Commonwealth Ave}{Boston -- MA -- 02116}%{ 
+%Permanent Address: 156 Minuteman Road -- Ridgefield -- CT -- 06877}
+\phone[mobile]{(203) 240-8072}                  
+% \phone[fixed]{01234 123456}                    
+%\phone[fax]{+3~(456)~789~012}                      
+\email{shance@ece.neu.edu}    
+%\extrainfo{\emailsymbol\emaillink{spencerhance@gmail.com}}
+% optional, remove / comment the line if not wanted
+\homepage{www.shance.me}                         
+\extrainfo{Availability: January-August 2017}
+% optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}  % optional
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+% Bring the experience section closer to the title
+\vspace{-40pt}
+
+%\small{Bio goes here}
+
+
+
+
+% Education section
+\section{Education}
+\vspace{5pt}
+
+%\subsection{Academic Qualifications}
+%\vspace{5pt}
+
+% Begin list of schools
+\begin{itemize}
+
+\item[] {\cventry{May 2019}{Bachelor of Science}{Northeastern 
+University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
+\vspace{-1mm}	\begin{itemize}
+	 \item IEEE Student Chapter Treasurer: Managed finances, sponsorships, 
+and reimbursements
+	 \item Beta Gamma Epsilon Engineering Fraternity
+	\end{itemize}
+	
+\item[] {\textit{Relevant Coursework}}
+\vspace{-1mm} \begin{itemize}
+               \item Algorithms (C++), Networks, Digital Logic Design 
+		(Verilog, FPGAs), Discrete Structures, Embedded Design (C),
+		Circuits \& Signals, Engineering Problem 
+		Solving and Computation (MATLAB, C++)
+              \end{itemize}
+
+%\vspace{2pt}
+%\item{\cventry{June 2014}{AP Scholar with Distinction}{Ridgefield High
+%School}{Ridgefield, CT}{}{}}
+%\vspace{-1mm}	\begin{itemize}
+%	 \item Boy Scouts of America: Life Scout 
+%	 \item Badminton Club: President (2012-2014)
+%	 \item Western CT Youth Orchestra: Principal Second-Violin
+%	\end{itemize}
+
+\end{itemize}
+%\vspace{2pt}
+
+
+
+
+% Experience Section
+\section{Experience}
+
+\vspace{6pt}
+
+% Begin main list
+\begin{itemize}
+
+
+% EnerNOC
+\item[] {\cventry{January 2016 -- Present}{Performance Engineering Co-op}
+{EnerNOC}{Boston, MA}{}{\vspace{3pt}}
+\vspace{-3mm}	\begin{itemize}
+	 \item Created automated tests to measure 
+web-application performance using JMeter and LoadRunner
+	 \item Developed a MEAN.js application to load data for application testing
+	 \item Implemented status pages to monitor production services
+	 \item Ported a core algorithm to Python/OpenCL and gained a 7x speedup
+	\end{itemize}
+}
+\vspace{6pt}
+
+
+% NUCAR
+\item[] {\cventry{October 2014 -- Present}{Undergraduate Researcher}
+{NU Computer Architecture Research Group}{Boston, MA}{}{\vspace{3pt}}
+\vspace{-3mm}	\begin{itemize}
+	\item \textbf{\href{http://multi2sim.org}{Multi2Sim Heterogeneous System Simulator}}
+		\begin{itemize}
+		\item Ported over 15,000 lines of C to C++ for a full application rewrite
+		\item Developed unit tests with Google Test for automated code validation
+		\item Debugged simulator code with GDB for release
+		\item Analyzed x86 application patterns with Valgrind for more efficient simulation
+		\end{itemize}
+	\item \textbf{\href{studentclustercompetition.us}{Student Cluster Competition (SC'15, SC'16)}}
+		\begin{itemize}
+		\item Designed a 3kW supercomputer with a team of students
+		\item Optimized scientific applications for best performance on the system
+		\item Troubleshooted the High Performance Computing software stack 
+		\item Developed visualizations to show program execution
+		\end{itemize}
+	\item \textbf{\href{https://github.com/spencerhance/multi2sim-FaultInjectionTool}{Fault Injection Tool}}
+		\begin{itemize}
+		\item Developed a bash tool to run massive GPU fault injection simulations
+		\item Utilized Python and SQLite3 to analyze simulation results
+		\end{itemize}
+		
+\end{itemize}		
+}
+\vspace{6pt}
+
+% ResNet
+\item[] {\cventry{October 2014 -- Present}{Computer Technician}
+{NU ResNet Resource Center}{Boston, MA}{}{\vspace{3pt}}
+\vspace{-3mm}	\begin{itemize}
+	 \item Performed software repairs on student devices
+	 \item Worked on 20-30 different Windows and OSX systems per week
+	 \item Collaborated with other technicians using the ServiceNow 
+infrastructure for a seamless repair
+	\end{itemize}
+}
+\vspace{6pt}
+
+% Ridgefield Tiger Tech
+% \item{\cventry{May 2012 -- August 2014}{COO/Head Technician}
+% {Ridgefield Tiger Tech}{Ridgefield, CT}{}{\vspace{3pt}}
+% \vspace{-3mm}	\begin{itemize}
+% 	 \item Ran a successful technology repair business with a satisfied 
+% 		customer base
+% 	 \item Gained close to 300 customers and billed over \$50k 
+% 	 \item Responded to all customer inquiries while providing excellent 
+% 		customer service
+% 	 \item Repaired a wide variety of computer systems and mobile devices
+% 	 \item Worked on 10-15 different systems per week
+% 	\end{itemize}
+% }
+
+% End experience list
+\end{itemize}
+
+
+
+
+% Skills section
+\section{Technical Skills}
+
+\vspace{2pt}
+
+\begin{itemize}
+\item[]  \textbf{Languages:} Python, 
+C(++)(Google Test), Bash, OpenCL(basic), JavaScript (MEAN.js), Verilog, MATLAB, LaTeX
+\vspace{4pt}
+
+\item[]  \textbf{Software:} Linux, Windows, OSX, Vim, Git, SVN, GDB,
+Eclipse, Splunk, JMeter, LoadRunner 
+\vspace{4pt}
+
+%\item[]  \textbf{Hardware:} CPU/ AMD-GPU architecture (some-experience), ZedBoard
+%\vspace{4pt}
+
+\item[]  \textbf{Certifications:} CompTIA A+ Technician
+%\vspace{-2pt}
+
+\end{itemize}
+
+
+
+%Extracurricular section
+%\section{Extracurricular}
+%
+%\begin{itemize}
+%\vspace{6pt}
+% \item[] \href{multi2sim.org}{\textbf{Multi2Sim}} Worked on a large open-source 
+%heterogeneous system simulator.  Tasks included porting the Cache Coherency 
+%and AMD Southern Islands model from C to C++, writing Unit Tests using the 
+%Google Test platform, and debugging code throughout the simulator (GDB).
+%\vspace{6pt}
+%
+%\item[]
+%{\textbf{Student Cluster Competition (2015, 2016)}}
+%Competed with a team of undergraduates in creating and optimizing a 
+%supercomputer.  Additionally, optimized scientific applications for the system.
+%\vspace{6pt}
+%
+%\item[] 
+%\href{https://github.com/spencerhance/multi2sim-FaultInjectionTool}
+%{\textbf{Fault Injection Tool}} Built a bash tool to run massive fault 
+%injection simulations of AMD Evergreeen GPUs and analyze the results.  The tool 
+%was configured to run on a SLURM cluster and used python and sqlite3 to process 
+%the results.
+%
+%\end{itemize}
+
+
+
+
+
+
+% References
+%\begin{center}
+%	\textit{References available upon request}
+%\end{center}
+
+
+
+
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
