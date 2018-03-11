@@ -33,7 +33,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.90]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -81,7 +81,7 @@
 \makecvtitle
 
 % Bring the education section closer to the title
-\vspace{-45pt}
+\vspace{-51pt}
 
 %\small{Bio goes here}
 
@@ -90,7 +90,7 @@
 
 % Education section
 \section{Education}
-\vspace{2pt}
+\vspace{1pt}
 
 %\subsection{Academic Qualifications}
 %\vspace{5pt}
@@ -128,7 +128,7 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 
 \end{itemize}
 %\vspace{2pt}
-\vspace{-5pt}
+\vspace{-6pt}
 
 
 
@@ -136,16 +136,17 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 % Experience Section
 \section{Work Experience}
 
-\vspace{2pt}
+\vspace{1pt}
 
 % Begin main list
 \begin{itemize}
 
 % AMD round 2
-\item[] {\cventry{January 2018 -- Present}{CPU Architecture Research Co-op}
-{Advanced Micro Devices (AMD)}{Boxborough, MA}{}{\vspace{1pt}}
+\item[] {\cventry{January 2018 -- Present}{Research Co-op - CPU Architecture}
+{Advanced Micro Devices (AMD) (Research)}{Boxborough, MA}{}{\vspace{1pt}}
 \vspace{-8pt}	\begin{itemize}
-	 \item Researching new CPU cache designs for HPC workloads
+	 \item Researching cache prefetching methodologies for HPC/Exascale workloads
+	 \item Profiled HPC applications with dynamic instrumentation to discover new cache metrics
 	\end{itemize}
 }
 \vspace{6pt}
@@ -155,18 +156,18 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 \item[] {\cventry{October 2017 -- Present}{Technical Assistant - Machine Learning}
 {MIT Lincoln Laboratory}{Cambridge, MA}{}{\vspace{1pt}}
 \vspace{-8pt}	\begin{itemize}
-	 \item Developing Machine Learning pipelines in \textbf{Python}
+	 \item Implementing and documenting Machine Learning pipelines \textbf{(Python, Anaconda, SLURM)}
 % 	 \item Evaluating a meta learning system to automatically select models
 	\end{itemize}
 }
 \vspace{6pt}
 
 % AMD
-\item[] {\cventry{January -- July 2017}{GPU Architecture Co-op}
+\item[] {\cventry{January -- July 2017}{Engineer Co-op - GPU Architecture}
 {Advanced Micro Devices (AMD)}{Boxborough, MA}{}{\vspace{1pt}}
 \vspace{-8pt}	\begin{itemize}
-	 \item Researched new GPU compressed cache designs and presented at internal innovation expo
-	 \item Contributed to cache simulator (\textbf{C++}) and gained 3x speedup on runtime
+	 \item Researched new GPU compressed cache designs and presented work at internal innovation expo
+	 \item Co-developed cache simulator (\textbf{C++}) and decreased simulator runtime by 300\%
 	 \item Designed simulation framework (\textbf{Bash, Python}) to run and analyze large-scale experiments on LSF cluster
 % 	 \item Implemented Catch unit testing framework and increased code coverage
 	\end{itemize}
@@ -177,9 +178,10 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 \item[] {\cventry{January -- December 2016}{Performance Engineering Co-op}
 {EnerNOC}{Boston, MA}{}{\vspace{1pt}}
 \vspace{-8pt}	\begin{itemize}
-	 \item Created automated tests to measure web-application performance using JMeter and LoadRunner
-	 \item Ported a core algorithm to \textbf{Python/OpenCL} and gained a 7x speedup
-	 \item Developed a \textbf{MEAN.js} application to generate and load test data from Hadoop cluster
+	 \item Created automated tests to measure web-application performance \textbf{(JMeter, LoadRunner, Jenkins, AWS)}
+	 \item Ported a proprietary algorithm at company hackathon to \textbf{Python/OpenCL} and gained a 7x speedup
+	 \item Developed a \textbf{MEAN.js/JavaScript} application to generate and load test data from Hadoop cluster
+	 \item Developed a custom status page and \textbf{Splunk} dashboards to display critical performance data on the office wall
 % 	 \item Implemented status pages to monitor production services
 	\end{itemize}
 }
@@ -188,14 +190,14 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 
 % End experience list
 \end{itemize}
-\vspace{-5pt}
+\vspace{-6pt}
 
 
 
 % Research Experience Section
 \section{Research Experience}
 
-\vspace{2pt}
+\vspace{1pt}
 
 % Begin main list
 \begin{itemize}
@@ -204,10 +206,9 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 \item[] {\cventry{July 2015 -- Present}{Student Competitor}
 {International Supercomputing Competitions (SC'15, SC'16, ISC'17, SC'17)}{Boston, MA}{}{\vspace{1pt}}
 \vspace{-8pt}	\begin{itemize}
-	
-		\item Broke the competition record of the HPCG benchmark at ISC'17 in Frankfurt, Germany
-		\item Won the ``MacGyver Award'' for sourcing and building a HPC cluster in 6 hours at SC'16
-		\item Evaluated performance of scientific applications and optimized them for the system
+		\item Designed/built four supercomputers and optimized scientific applications for them
+		\item Competition record of the HPCG benchmark at ISC'17 in Frankfurt, Germany
+		\item Won the ``MacGyver Award'' for sourcing and building a HPC cluster in 6 hours at SC'16 due to shipping issues
 % 		\item Developed visualizations to show program execution
 		\end{itemize}
 }
@@ -217,10 +218,10 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 \item[] {\cventry{October 2014 -- Present}{Undergraduate Researcher}
 {NU Computer Architecture Research Group}{Boston, MA}{}{\vspace{1pt}}
 \vspace{-8pt}	\begin{itemize}
-		\item Ported over 15,000 lines of \textbf{C} to \textbf{C++} for Multi2Sim heterogeneous system simulator
-		\item Developed unit tests with Google Test for automated code validation
-		\item Developed a bash tool to run massive GPU fault injection simulations for reliability studies
-		\item Utilized \textbf{Python} and SQLite3 to analyze simulation results
+		\item Ported over 15,000 lines of \textbf{C} to \textbf{C++} for \textbf{open-source} Multi2Sim CPU-GPU simulator
+		\item Developed unit tests with Google Test and discovered/fixed bug affecting the accuracy of all emulations 
+		\item Designed a tool \textbf{(Bash, Python, SQLite3)} to run many parallel simulations on a SLURM cluster
+		%\item Utilized \textbf{Python} and SQLite3 to analyze simulation results
 		\end{itemize}
 		
 % \end{itemize}		
@@ -229,7 +230,7 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 
 % End experience list
 \end{itemize}
-\vspace{-5pt}
+\vspace{-6pt}
 
 
 % Skills section
@@ -238,7 +239,7 @@ University}{Boston, MA}{\textit{\textbf{Computer Engineering}}}{}}
 % \vspace{2pt}
 
 \begin{itemize}
-\item[]  \textbf{Languages:} Python (Pandas, NumPy, Matplotlib), C(++), Bash, JavaScript (MEAN.js)
+\item[]  \textbf{Languages:} Python, C(++), Bash
 \vspace{3pt}
 \item[]  \textbf{Technologies:} Linux, HPC Concepts, LaTeX, Git, Perforce, GDB, LSF, Splunk, JMeter
 % \vspace{3pt}
